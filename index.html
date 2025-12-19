@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vijayapathi Traders | Eagle Plast Water Tanks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+body {
+    background: linear-gradient(145deg, #1a237e, #283593);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    min-height: 100vh;
+}
+.app {
+    background: #f5f6fb;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.2);
+    position: relative;
+}
+.scroll {
+    padding: 16px 16px 90px;
+}
+
+/* Shop Colors */
+:root {
+    --primary-blue: #1a237e;
+    --secondary-blue: #283593;
+    --accent-orange: #ff6d00;
+    --light-orange: #ff9100;
+    --dark-blue: #0d1440;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(145deg, var(--primary-blue), var(--dark-blue));
+    padding: 18px;
+    border-radius: 22px;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 18px;
+}
+.hero h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+.hero h2 {
+    font-size: 18px;
+    margin-top: 4px;
+    color: var(--text-light);
+}
+.hero p {
+    font-size: 13px;
+    opacity: .95;
+    margin-top: 8px;
+    color: var(--text-light);
+}
+.phones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+.phone {
+    background: rgba(255,255,255,.15);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* IMAGES */
+.image-box {
+    margin-top: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+.image-box img {
+    width: 100%;
+    display: block;
+}
+
+/* SECTION */
+.section-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin: 18px 0 6px;
+}
+.section-sub {
+    text-align: center;
+    font-size: 13px;
+    color: #6e7a9a;
+}
+
+/* PRICE CARD */
+.card {
+    background: linear-gradient(145deg, var(--secondary-blue), var(--primary-blue));
+    border-radius: 22px;
+    padding: 16px;
+    margin-top: 12px;
+    color: var(--text-light);
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+.card h3 {
+    font-size: 26px;
+    color: var(--text-light);
+}
+.badge {
+    background: rgba(255,255,255,.2);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin: 6px 0;
+    color: var(--text-light);
+}
+.card p {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: var(--text-light);
+}
+.sep {
+    border-top: 1px solid rgba(255,255,255,.4);
+    margin: 10px 0;
+}
+.tank-image-small {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
+/* TANK */
+.tank {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+.tank img {
+    max-width: 20;
+    width: 100%;
+    margin: 10px auto;
+}
+.tank h3 {
+    color: var(--dark-blue);
+}
+.tank p {
+    font-size: 13px;
+    color: #6e7a9a;
+}
+
+/* FORM */
+.form-section {
+    background: #fff;
+    border-radius: 22px;
+    padding: 20px;
+    margin-top: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+.form-section h3 {
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 15px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark-blue);
+    font-weight: 500;
+    font-size: 14px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-blue);
+    outline: none;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(145deg, var(--accent-orange), var(--light-orange));
+    border-radius: 22px;
+    color: var(--text-light);
+    padding: 18px;
+    text-align: center;
+    margin-top: 22px;
+}
+.btn {
+    display: block;
+    background: var(--text-light);
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.whatsapp-btn {
+    background: linear-gradient(145deg, #25D366, #128C7E);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* ADDRESS */
+.addr {
+    background: var(--dark-blue);
+    color: var(--text-light);
+    border-radius: 22px;
+    padding: 16px;
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+/* BOTTOM BAR */
+.bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+.bottom a {
+    background: linear-gradient(145deg, var(--accent-orange), var(--light-orange));
+    color: var(--text-light);
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+/* Modal for Form */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.close-modal {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+/* Tank Images Container */
+/* Card tank images */
+/* TANK GRID */
+.tank-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 15px;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #283593, #1a237e);
+    border-radius: 22px;
+    padding: 16px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    position: relative;
+}
+
+/* BEST SELLER TAG */
+.best-seller {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(145deg, #ff6d00, #ff9100);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+/* TANK IMAGE */
+.tank-image-small {
+    width: 100%;
+    max-width: 160px;
+    height: 120px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 12px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* BADGE */
+.badge {
+    background: rgba(255,255,255,.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    display: inline-block;
+    margin: 6px 0;
+}
+
+/* PRICE HIGHLIGHT */
+.price-highlight {
+    background: rgba(255,255,255,.15);
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+/* SEPARATOR */
+.sep {
+    border-top: 1px solid rgba(255,255,255,.4);
+    margin: 10px 0;
+}
+
+/* SMALL DEVICES */
+@media (max-width: 360px) {
+    .tank-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARD HOVER EFFECT */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+/* IMAGE HOVER ZOOM */
+.card:hover .tank-image-small {
+    transform: scale(1.08);
+}
+
+.tank-image-small {
+    transition: transform 0.3s ease;
+}
+/* PRICE HIGHLIGHT HOVER */
+.card:hover .price-highlight {
+    background: rgba(255,255,255,0.25);
+}
+/* BEST SELLER PULSE */
+.best-seller {
+    animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 rgba(255,145,0,0.7); }
+    50% { box-shadow: 0 0 12px rgba(255,145,0,1); }
+    100% { box-shadow: 0 0 0 rgba(255,145,0,0.7); }
+}
+/* ADDRESS FLEX LAYOUT */
+.addr-flex {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ADDRESS TEXT */
+.addr-text {
+    flex: 2;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ADDRESS IMAGE */
+.addr-image {
+    flex: 1;
+    max-width: 120px;
+}
+
+.addr-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 400px) {
+    .addr-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .addr-image {
+        max-width: 160px;
+        margin-top: 10px;
+    }
+}
+/* ADDRESS FLEX */
+.addr-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+/* ADDRESS TEXT */
+.addr-text {
+    flex: 2;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* BUTTON AREA */
+.addr-action {
+    flex: 1;
+    text-align: right;
+}
+
+/* GET DIRECTIONS BUTTON */
+.directions-btn {
+    display: inline-block;
+    background: linear-gradient(145deg, #25D366, #128C7E);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* HOVER EFFECT */
+.directions-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+}
+
+/* MOBILE STACK */
+@media (max-width: 420px) {
+    .addr-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .addr-action {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<div class="app">
+<div class="scroll">
+
+<!-- HERO -->
+<div class="hero">
+<h1>விஜயபதி டிரேடர்ஸ்</h1>
+<h2>VIJAYAPATHI TRADERS</h2>
+<p>
+Sanitary • Paints • Pipes • Electrical Items<br>
+Eagle Plast Triple-Layer Water Tanks
+</p>
+<div>Sikandar Chavadi</div>
+
+<div class="phones">
+<div class="phone">📞 0452-2669667</div>
+<div class="phone">📱 98421 33726</div>
+<div class="phone">📱 80723 52445</div>
+</div>
+
+<div class="image-box">
+<!-- Replace with your shop image -->
+<img src="shop.jpg" alt="Vijayapathi Traders Shop">
+</div>
+</div>
+
+<!-- PRICE LIST -->
+<h2 class="section-title">Wholesale Price List</h2>
+<p class="section-sub">Best Rate ₹4.30 per Litre</p>
+
+<!-- 350L Tank -->
+<div class="card">
+<h3>350 L</h3>
+<div class="badge">Small Homes</div>
+<!-- Replace with your actual 350L tank image -->
+<img src="350.jpeg" alt="350L Tank" class="tank-image-small">
+<p>₹4.30 × 350L</p>
+<div class="sep"></div>
+<b>Total: ₹1,505</b>
+</div>
+
+<!-- 500L Tank -->
+<div class="card">
+<h3>500 L</h3>
+<div class="badge">Medium Homes</div>
+<!-- Replace with your actual 500L tank image -->
+<img src="500.jpeg" alt="500L Tank" class="tank-image-small">
+<p>₹4.30 × 500L</p>
+<div class="sep"></div>
+<b>Total: ₹2,150</b>
+</div>
+
+<!-- 750L Tank -->
+<div class="card">
+<h3>750 L</h3>
+<div class="badge">Large Families</div>
+<!-- Replace with your actual 750L tank image -->
+<img src="750.jpeg" alt="750L Tank" class="tank-image-small">
+<p>₹4.30 × 750L</p>
+<div class="sep"></div>
+<b>Total: ₹3,225</b>
+</div>
+
+<!-- 1000L Tank -->
+<div class="card">
+<h3>1000 L</h3>
+<div class="badge">Commercial Use</div>
+<!-- Replace with your actual 1000L tank image -->
+<img src="1000.jpeg" alt="1000L Tank" class="tank-image-small">
+<p>₹4.30 × 1000L</p>
+<div class="sep"></div>
+<b>Total: ₹4,300</b>
+</div>
+
+<!-- ORDER FORM SECTION -->
+<div class="form-section">
+<h3>Order Water Tank</h3>
+<p class="section-sub">Fill the form and send via WhatsApp</p>
+<form id="orderForm">
+    <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+    </div>
+    
+    <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Enter your WhatsApp number">
+    </div>
+    <div class="form-group">
+        <label for="Shop">Shop name *</label>
+        <input type="text" id="Shop" name="Shop" required placeholder="Enter your shop name">
+    </div>
+    <div class="form-group">
+        <label for="tankSize">Select Tank Size *</label>
+        <select id="tankSize" name="tankSize" required>
+            <option value="">Choose tank size</option>
+            <option value="350L">350 Litres - ₹1,505</option>
+            <option value="500L">500 Litres - ₹2,150</option>
+            <option value="750L">750 Litres - ₹3,225</option>
+            <option value="1000L">1000 Litres - ₹4,300</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="quantity">Quantity *</label>
+        <input type="number" id="quantity" name="quantity" required min="1" value="1" placeholder="How many tanks?">
+    </div>
+    
+    <div class="form-group">
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter delivery address (optional)"></textarea>
+    </div>
+    
+    <button type="button" class="whatsapp-btn" onclick="sendToWhatsApp()">
+        📱 Send Order via WhatsApp
+    </button>
+</form>
+</div>
+
+<!-- TANK IMAGE GALLERY -->
+<div class="tank">
+<h3>Eagle Plast Water Tanks</h3>
+<p>Blow-moulded • Triple Layer • UV Protected</p>
+<div class="tank-images">
+    <div class="tank-thumb">
+        <img src="350.jpeg" alt="350L Tank">
+    </div>
+    <div class="tank-thumb">
+        <img src="500.jpeg" alt="500L Tank">
+    </div>
+    <div class="tank-thumb">
+        <img src="750.jpeg" alt="750L Tank">
+    </div>
+    <div class="tank-thumb">
+        <img src="1000.jpeg" alt="1000L Tank">
+    </div>
+</div>
+<p>350L • 500L • 750L • 1000L Available</p>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+<h3>Ready to Order?</h3>
+<p>Contact us for bulk & dealer prices</p>
+<a class="btn" href="tel:9842133726">📞 Call Now - 98421 33726</a>
+<a class="btn" href="tel:8072352445">📞 Call Now - 80723 52445</a>
+</div>
+<!-- ADDRESS -->
+<div class="addr addr-flex">
+    <div class="addr-text">
+        <b>📍 Address:</b><br>
+        Shop No. 3/1410A, Palamedu Main Rd,<br>
+        Sikkandar Savadi, Koodal Nagar,<br>
+        Madurai – 625018<br><br>
+        <b>⏰ Timings:</b> 9:00 AM - 8:00 PM
+    </div>
+
+    <div class="addr-action">
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=INDIAN+SANITARY+%26+PIPES+Madurai" 
+          target="_blank" 
+          class="directions-btn">
+          📍 Get Directions
+        </a>
+    </div>
+</div>
+
+<!-- ADDRESS -->
+
+
+</div>
+</div>
+
+<!-- BOTTOM FIXED BUTTON -->
+<div class="bottom">
+<a href="javascript:void(0)" onclick="openOrderForm()">📦 Order Water Tank Now</a>
+</div>
+
+<!-- MODAL FOR FORM -->
+<div class="modal" id="orderModal">
+<div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">×</span>
+    <h3 style="color: var(--dark-blue); margin-bottom: 20px;">Quick Order Form</h3>
+    <form id="quickOrderForm">
+        <div class="form-group">
+            <input type="text" placeholder="Your Name *" id="quickName" required>
+        </div>
+        <div class="form-group">
+            <input type="tel" placeholder="WhatsApp Number *" id="quickPhone" required>
+        </div>
+        <div class="form-group">
+            <select id="quickTankSize" required>
+                <option value="">Select Tank Size</option>
+                <option value="350L">350 Litres</option>
+                <option value="500L">500 Litres</option>
+                <option value="750L">750 Litres</option>
+                <option value="1000L">1000 Litres</option>
+            </select>
+        </div>
+        <button type="button" class="whatsapp-btn" onclick="sendQuickOrder()">
+            📱 Send Quick Order
+        </button>
+    </form>
+</div>
+</div>
+
+<script>
+// WhatsApp Integration
+function sendToWhatsApp() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const tankSize = document.getElementById('tankSize').value;
+    const quantity = document.getElementById('quantity').value;
+    const address = document.getElementById('address').value;
+    
+    if (!name || !phone || !tankSize || !quantity) {
+        alert('Please fill all required fields');
+        return;
+    }
+    
+    // Calculate price based on tank size
+    let price = 0;
+    switch(tankSize) {
+        case '350L': price = 1505; break;
+        case '500L': price = 2150; break;
+        case '750L': price = 3225; break;
+        case '1000L': price = 4300; break;
+    }
+    const totalPrice = price * parseInt(quantity);
+    
+    // Create message
+    const message = `*New Water Tank Order - Vijayapathi Traders*
+    
+*Customer Details:*
+Name: ${name}
+Phone: ${phone}
+
+*Order Details:*
+Tank Size: ${tankSize}
+Quantity: ${quantity}
+Total Price: ₹${totalPrice}
+
+*Delivery Address:*
+${address || 'Not provided'}
+
+*Shop Details:*
+Vijayapathi Traders
+Sikandar Chavadi, Madurai
+📞 98421 33726 | 80723 52445`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // WhatsApp API URL
+    const whatsappURL = `https://wa.me/919842133726?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+}
+
+// Quick Order Functions
+function openOrderForm() {
+    document.getElementById('orderModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('orderModal').style.display = 'none';
+}
+
+function sendQuickOrder() {
+    const name = document.getElementById('quickName').value;
+    const phone = document.getElementById('quickPhone').value;
+    const tankSize = document.getElementById('quickTankSize').value;
+    
+    if (!name || !phone || !tankSize) {
+        alert('Please fill all fields');
+        return;
+    }
+    
+    // Calculate price
+    let price = 0;
+    switch(tankSize) {
+        case '350L': price = 1505; break;
+        case '500L': price = 2150; break;
+        case '750L': price = 3225; break;
+        case '1000L': price = 4300; break;
+    }
+    
+    const message = `*Quick Order - Water Tank*
+Name: ${name}
+Phone: ${phone}
+Tank Size: ${tankSize}
+Price: ₹${price}
+
+Please call me back to confirm order.`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/919842133726?text=${encodedMessage}`;
+    
+    window.open(whatsappURL, '_blank');
+    closeModal();
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('orderModal');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+</script>
+</body>
+</html>
